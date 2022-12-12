@@ -1,5 +1,5 @@
 const { Message, Client, MessageEmbed,MessageActionRow,MessageButton } = require("discord.js");
-const saixd = ['701643179212013568', '954815434828431451','336007991574659074','972076172684967947']
+const saixd = ['701643179212013568', '954815434828431451','336007991574659074','972076172684967947'] //put your discord id 
 module.exports = {
   name: "noprefix",
   aliases: ['np'],
@@ -8,6 +8,7 @@ module.exports = {
     const embed = new MessageEmbed()
     .setColor(client.color)
     let prefix = message.guild.prefix;
+    if(!saixd.includes(message.author.id)) return;
     if(!args[0]){
       return message.channel.send({embeds: [embed.setColor(client.color).setDescription(`Please provide the required arguments.\n${prefix}noprefix \`<add/remove/list>\` \`<user id>\``)]})
     }
