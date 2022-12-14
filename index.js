@@ -51,3 +51,10 @@ client.emoji = {
 
 client.login(data.token);
 module.exports = client;
+
+process.on('unhandledRejection',async(err) => {
+  console.error(err);
+});
+process.on('uncaughtException',async(er) => {
+  console.error(er)
+});
