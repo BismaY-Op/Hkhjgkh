@@ -5,9 +5,9 @@ const status = `${prefix}help`;
 module.exports = {
   bot: {
     info: {
-      prefix: process.env.prefix || '&',
+      prefix: process.env.prefix || '-',
       token: process.env.token,
-      invLink: 'https://dsc.gg/ares-support',
+      invLink: 'https://dsc.gg/',
     },
     options: {
       founders: ['954815434828431451'],
